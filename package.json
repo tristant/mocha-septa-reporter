@@ -1,0 +1,41 @@
+{
+  "name": "mocha-septa-reporter",
+  "version": "1.0.0",
+  "description": "Fail your tests, do the walk of shame with the Septa!",
+  "main": "index.js",
+  "dependencies": {
+    "mocha": "^3.1.2",
+    "node-emoji": "^1.4.3",
+    "play-sound": "^1.1.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tristant/mocha-septa-reporter.git"
+  },
+  "engines": {
+    "node": ">=4.7.0"
+  },
+  "keywords": [
+    "mocha",
+    "reporter",
+    "septa",
+    "gameofthrones",
+    "bell",
+    "shame",
+    "fail",
+    "tests",
+    "testing"
+  ],
+  "author": "“Tristan Ekfelt Turpin <“tristanturpin-applications@yahoo.fr”> (“https://github.com/tristant”)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tristant/mocha-septa-reporter/issues"
+  },
+  "homepage": "https://github.com/tristant/mocha-septa-reporter#readme"
+}
