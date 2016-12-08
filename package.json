@@ -1,7 +1,7 @@
 {
   "name": "mocha-septa-reporter",
   "version": "1.0.0",
-  "description": "Fail your tests, do the walk of shame with the Septa!",
+  "description": "Mocha reporter that features the Septa, the \"nun\" from Game Of Thrones",
   "main": "index.js",
   "dependencies": {
     "mocha": "^3.1.2",
