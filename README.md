@@ -27,6 +27,7 @@ Mocha reporter that -should you fail your tests- :
     Shame! Shame! Shame! :bell:
 
  3. Before the shame message, will display a random ASCII Septa (2 choices so far), such as :
+ (Note: if you're watching this on NPM the ASCII doesn't render well here)
 <pre>                                                                                  `````````````.                                               
                                                                                 .````.`````.```..                                              
                                                                                ..``.........````.,                                             
