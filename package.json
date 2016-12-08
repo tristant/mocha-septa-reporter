@@ -1,6 +1,6 @@
 {
   "name": "mocha-septa-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mocha reporter that features the Septa, the \"nun\" from Game Of Thrones",
   "main": "index.js",
   "dependencies": {
