@@ -50,6 +50,7 @@ function mochaSeptaReporter (runner) {
   var self = this;
   var indents = 0;
   var n = 0;
+  var failures = 0;
 
   function indent () {
     return Array(indents).join('  ');
@@ -93,23 +94,29 @@ function mochaSeptaReporter (runner) {
   });
 
   runner.on('fail', function (test) {
-    /* Septa's here ! */
-    console.log(asciiSepta);
-
-    /* Shame ! Shame ! Shame ! */
-    player.play(shameSound, { timeout: 300 }, function(err){
-      if (err) throw err
-    });
-
-    /* Emojis, just because */
-    // Alternative with the footprints, not sure if better
-    //var shame = (emoji.get('footprints')+' '+color('fail',' SHAME! ')).repeat(3);
-    var shame = (color('fail',' SHAME! ')).repeat(3);
-    var walkOfShame = ('\n'+ shame + emoji.get('bell'));
-    console.log(walkOfShame.repeat(3)+ '\n\n'+ indent() + color('fail', '  %d) %s'), ++n, test.title);
+    failures++ ;
+    console.log(indent() + color('fail', '  %d) %s'), ++n, test.title);
   });
 
-  runner.on('end', self.epilogue.bind(self));
+  runner.on('end', function() {
+    if (failures > 0){
+      /* Septa's here ! */
+      console.log(asciiSepta);
+  
+      /* Shame ! Shame ! Shame ! */
+      player.play(shameSound, { timeout: 300 }, function(err){
+        if (err) throw err
+      });
+  
+      /* Emojis, just because */
+      // Alternative with the footprints, not sure if better
+      //var shame = (emoji.get('footprints')+' '+color('fail',' SHAME! ')).repeat(3);
+      var shame = (color('fail',' SHAME! ')).repeat(3);
+      var walkOfShame = ('\n'+ shame + emoji.get('bell'));
+      console.log(walkOfShame.repeat(3)+ '\n\n');
+    }
+    self.epilogue();
+  });
 }
 
 /**
